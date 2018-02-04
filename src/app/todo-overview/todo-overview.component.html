@@ -1,0 +1,11 @@
+<div id="todo-overview">
+    <div class="text-right">
+        <span class="badge badge-info">
+          Last Updated - {{ (lastUpdate | async) | date: 'mediumTime' }}
+          |
+          Tasks count - {{ (todos | async).length }}
+        </span>
+      </div>
+      <button class="btn btn-primary" type="button" (click)="clearTodos()">Delete All</button>
+</div>
+
